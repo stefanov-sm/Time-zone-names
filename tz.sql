@@ -1,9 +1,9 @@
 CREATE OR REPLACE FUNCTION public.offset_tz(wtz text)
 RETURNS text LANGUAGE sql as
 $function$
-with timezones(offset_tz, windows_tz) as
+WITH timezones(offset_tz, windows_tz) as
 (
- values
+ VALUES
  ('UTC-12:00', 'Dateline Standard Time'),
  ('UTC-11:00', 'UTC-11'),
  ('UTC-10:00', 'Aleutian Standard Time'),
@@ -143,5 +143,7 @@ with timezones(offset_tz, windows_tz) as
  ('UTC+13:00', 'Samoa Standard Time'),
  ('UTC+14:00', 'Line Islands Standard Time')
 ) 
-select offset_tz from timezones where windows_tz = wtz;
+SELECT offset_tz
+ FROM timezones
+ WHERE upper(windows_tz) = upper(wtz);
 $function$;
