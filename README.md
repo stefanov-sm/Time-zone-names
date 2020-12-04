@@ -1,2 +1,2 @@
 # Windows-time-zones
-Convert Windows-style time zone to UTC offset
+PostgreSQL function to convert Windows-style time zone to UTC offset
