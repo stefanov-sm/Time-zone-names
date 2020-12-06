@@ -1,4 +1,4 @@
-CREATE OR REPLACE FUNCTION public.timezone_names(windows_tz text DEFAULT NULL, iana_tz text DEFAULT NULL, territory text DEFAULT NULL)
+CREATE OR REPLACE FUNCTION timezone_names(windows_tz text DEFAULT NULL, iana_tz text DEFAULT NULL, territory text DEFAULT NULL)
 RETURNS TABLE(windows_timezone text, liana_timezone text, territory_abbrev text) LANGUAGE sql IMMUTABLE AS
 $function$
 with tzxml as (
