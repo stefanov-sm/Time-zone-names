@@ -17,4 +17,4 @@ select * from timezone_names(windows_tz => 'FLE Standard Time', territory => 'BG
 ```
 In order to force a single-line result for a Windows or IANA time zone name supply `territory => '001'` as an argument.
 
-The function uses [windowsZones.xml](https://github.com/unicode-org/cldr/blob/master/common/supplemental/windowsZones.xml), part of the Unicode [CLDR project](http://cldr.unicode.org/) as a source of data.
+The function uses [windowsZones.xml](https://github.com/unicode-org/cldr/blob/master/common/supplemental/windowsZones.xml), part of the [Unicode CLDR project](http://cldr.unicode.org/) as a source of data.
